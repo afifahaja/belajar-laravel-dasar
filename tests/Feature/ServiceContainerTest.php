@@ -62,7 +62,6 @@ class ServiceContainerTest extends TestCase
         $person = new Person ('Eko', 'Khannedy');
         $this->app->instance(Person::class, $person);
 
-
         $person1 = $this->app->make(Person::class);//person
         $person2 = $this->app->make(Person::class);//person
         $person3 = $this->app->make(Person::class);//person
@@ -75,6 +74,10 @@ class ServiceContainerTest extends TestCase
    
    /* public function testDependencyInjection()
         {
+            $this->app->singleton(Foo::clas, function ($app){
+               
+            });
+
             $foo = $this->app->make(Foo::class);
             $bar = $this->app->make(Bar::class);
 
